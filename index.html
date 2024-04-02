@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Textile Industries in India</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: lavender;
+    }
+    header {
+        background-color: orange;
+        color: #fff;
+        padding: 20px;
+        text-align: right;
+    }
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    section {
+        padding: 50px;
+        text-align: center;
+        background-image: url('1.jpg'); /* Add your background image here */
+        background-repeat: repeat-x;
+    }
+    h2 {
+        margin-bottom: 30px;
+        color: orange; /* Set section heading color to blue */
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        text-decoration: underline;
+    }
+    .btn {
+        background-color: lightseagreen;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: red;
+    }
+    h1 {
+        font-size: 56px;
+        color: brown;
+        text-align: center;
+        animation: textReveal 0.5s ease;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        text-decoration:underline;
+        
+    }
+    @keyframes textReveal {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .contact-info p {
+        margin: 0 10px;
+    }
+    h3 {
+        font-size: 36px;
+        color: red;
+        text-align: center;
+    }
+    /* Styling for challenge shapes */
+    .challenges {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .challenge {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        cursor: pointer;
+        perspective: 1000px;
+    }
+    .challenge-inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .challenge:hover .challenge-inner {
+        transform: rotateY(180deg);
+    }
+    .challenge-front,
+    .challenge-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+    }
+    .challenge-front {
+        background-color: #ff5722; /* Orange color */
+    }
+    .challenge-back {
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+        transform: rotateY(180deg);
+    }
+    /* Styling for challenge shapes */
+    .types {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 26px;
+    
+    }
+    .type {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        background-size: cover;
+        background-position: center;
+    }
+    /* Background images for types */
+    .cotton { background-image: url('cotton.png'); } /* Image for Cotton */
+    .silk { background-image: url('silk.webp'); } /* Image for Silk */
+    .wool { background-image: url('wool.webp'); } /* Image for Wool */
+    .jute { background-image: url('jute.jpg'); } /* Image for Jute */
+    .handloom { background-image: url('handloom.webp'); } /* Image for Handloom */
+
+
+    /* Center-align and style Home and History sections */
+#home, #history {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+   
+}
+
+
+#home p, #history p {
+    display: inline-block;
+    margin: auto;
+}
+
+
+</style>
+</head>
+<body>
+<header>
+    <button class="btn" onclick="scrollToSection('home')">Home</button>
+    <button class="btn" onclick="scrollToSection('history')">History</button>
+    <button class="btn" onclick="scrollToSection('types')">Types</button>
+    <button class="btn" onclick="scrollToSection('challenges')">Challenges</button>
+    <button class="btn" onclick="scrollToSection('contact')">Contact</button>
+</header>
+<main>
+    <h1>
+        <div class="headline">Textile Industries of India</div>
+        <button class="btn">By-Rohit & Sumeet</button>
+    </h1>
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to the Textile Industries in India website. This website was created as part of my CSCI 101 project. I've gathered comprehensive information about the textile industry of India and compiled it here.</p>
+    </section>
+    <section id="history">
+        <h2>History</h2>
+        <p>The history of textile industries in India is rich and diverse. Here are some notable events:</p>
+        <ul>
+            <li>Introduction of cotton cultivation in the Indus Valley Civilization</li>
+            <li>Development of handloom weaving techniques during the Vedic period</li>
+            <li>Establishment of trade routes for Indian textiles during the Maurya Empire</li>
+            <li>Patronage of textile arts by Mughal emperors</li>
+        </ul>
+    </section>
+    <section id="types">
+        <h2>Types</h2>
+        <div class="types">
+            <div class="type cotton"><b>COTTON</b></div>
+            <div class="type silk"><b>SILK</b></div>
+            <div class="type wool"><b>WOOL</b></div>
+            <div class="type jute"><b>JUTE</b></div>
+            <div class="type handloom"><b>HANDLOOM</b></div>
+        </div>
+    </section>
+    <section id="challenges">
+        <h2>Challenges</h2>
+        <div class="challenges">
+            <div class="challenge">
+                <div class="challenge-inner">
+                    <div class="challenge-front">
+                        Global Competition
+                    </div>
+                    <div class="challenge-back">
+                        With the liberalization of trade policies, Indian textile manufacturers must compete with cheaper imports from countries with lower production costs.
+                    </div>
+                </div>
+            </div>
+            <div class="challenge">
+                <div class="challenge-inner">
+                    <div class="challenge-front">
+                        Technological Obsolescence
+                    </div>
+                    <div class="challenge-back">
+                        Many textile mills in India still use outdated machinery and production techniques, hindering their efficiency and competitiveness.
+                    </div>
+                </div>
+            </div>
+            <div class="challenge">
+                <div class="challenge-inner">
+                    <div class="challenge-front">
+                        Environmental Concerns
+                    </div>
+                    <div class="challenge-back">
+                        The textile industry is one of the largest contributors to environmental pollution due to its use of harmful chemicals and water-intensive processes.
+                    </div>
+                </div>
+            </div>
+            <div class="challenge">
+                <div class="challenge-inner">
+                    <div class="challenge-front">
+                        Lack of Skilled Labor
+                    </div>
+                    <div class="challenge-back">
+                        The textile sector in India faces a shortage of skilled workers, especially in specialized areas like design and quality control.
+                    </div>
+                </div>
+            </div>
+            <div class="challenge">
+                <div class="challenge-inner">
+                    <div class="challenge-front">
+                        Infrastructure Bottlenecks
+                    </div>
+                    <div class="challenge-back">
+                        Inadequate infrastructure, including poor transportation networks and power shortages, hampers the growth of the textile industry and increases production costs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="contact">
+    <h3>Thank you for visiting</h3>
+    <div class="contact-info">
+        <p>Csci101</p>
+        <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+        <!-- Placeholder for Instagram icon -->
+    </div>
+    <div class="contact-info">
+        <p>rohit&sumeet:</p>
+        <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+        <!-- Placeholder for Facebook icon -->
+    </div>
+    <div class="contact-info">
+        <p>+1 778 XXX XXXX:</p>
+        <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></a> 
+        <!-- Placeholder for Twitter icon -->
+    </div>
+   
+</footer>
+<script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (sectionId === 'contact') {
+            section.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
+        } else {
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+</script>
+</body>
+</html>
